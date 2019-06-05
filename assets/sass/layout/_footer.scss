@@ -1,0 +1,155 @@
+.footer {
+    min-height: 100vh;
+    background-color: #ff4040;
+    background-position: right top;
+    @include notebook{
+        background-size: 90%;
+    }
+    @include tablet{
+        min-height: inherit;
+
+        padding-bottom: 60px;
+    }
+
+    @include mobile{
+        background-image: none !important;
+        padding-bottom: 30px;
+    }
+
+    .h{
+        font-weight: 900;
+        font-size: 70px;
+        color: #ff4040;
+        text-shadow: 0px 0px 4px  #ffffff;
+        line-height: 0.68;
+        text-align: center;
+        margin: 30px 0 0;
+    }
+
+    .form{
+        margin: rem( 400 ) 0 25px;
+
+        @include notebook{
+            margin-top: 17rem;
+        }
+
+        @include mobile{
+            margin-top: 30px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea{
+            height: rem( 95 );
+            font-weight: 300;
+            font-size: rem( 16 );
+            color: #9c9c9c;
+
+            padding-left: rem( 25 );
+            margin-bottom: rem( 25 );
+
+            @include notebook{
+                height: rem( 70);
+            }
+
+            @include mobile{
+                height: rem( 50);
+                font-size: 12px;
+            }
+        }
+
+        textarea{
+            padding-top: rem( 38 );
+            resize: none;
+            @include notebook{
+                padding-top: 24px;
+            }
+            @include mobile{
+                padding-top: 14px;
+            }
+        }
+
+        .btn-envia{
+            width: 11%;
+            height: rem( 55 );
+
+            border-left: 1px solid #d5d5d5;
+
+            position: absolute;
+            top: rem( 20 );
+            right: 10px;
+
+            background: url(../imgs/svgs/send.svg) #fff no-repeat center;
+            background-size: 40px;
+            cursor: pointer;
+
+            @include notebook{
+                height: 51px;
+                top: 0.45rem;
+                background-size: 30px;
+            }
+
+            @include mobile{
+                height: 35px;
+                background-size: 20px;
+            }
+        }
+    }
+
+    .infos{
+        .ico,
+        .txt{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ico{
+            font-size: rem( 30 );
+        }
+
+        .txt{
+            font-weight: 700;
+            .tel{
+                font-size: rem( 35 );
+                margin-bottom: 10px;
+                @include notebook{
+                    font-size: 1.8875rem;
+                }
+            }
+
+            .mail{
+                font-size: rem( 20 );
+                @include notebook{
+                    font-size: 0.95rem;
+                }
+            }
+        }
+
+        .btn-presskit{
+            display: inline-block;
+            background: #ff4040;
+            border: 2px solid #fff;
+
+            padding: 10px 30px;
+
+            @include border-radius( 50px );
+
+            @include mobile{
+                margin-top: 15px;
+            }
+
+            .ico-d{
+                font-size: rem( 20 );
+            }
+            .txt-d{
+                font-size: rem( 16 );
+            }
+
+            &:hover{
+                background: #fff;
+                color: #ff4040;
+            }
+        }
+    }
+}

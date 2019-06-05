@@ -1,0 +1,10 @@
+.header {
+    padding: rem( 20 ) 0;
+    z-index: 3;
+
+    .title{
+        font-family: $font-bold;
+        font-size: rem( 25 );
+        margin: rem( 15 ) 0 0;
+    }
+} 

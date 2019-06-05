@@ -1,0 +1,40 @@
+.btn {
+    display: inline-block;
+
+    font-family: $font-bold-condensed;
+    font-size: rem(16);
+    text-transform: uppercase;
+
+    border: 2px solid;
+    padding: rem(30);
+    @include mobile {
+        padding: 0.875rem;
+    }
+
+    .ico {
+        font-size: rem( 18);
+        color: #ffffff;
+    }
+
+    &.btn-marrom {
+        border-color: $marrom;
+        background: $marrom;
+
+        color: #000;
+        &:hover {
+            background: #000;
+            border-color: #000;
+
+            color: #ffffff;
+        }
+    }
+
+    &.btn-outline-marrom {
+        border-color: $marrom;
+        color: #ababab;
+        &:hover {
+            background: $marrom;
+            color: #ffffff;
+        }
+    }
+}

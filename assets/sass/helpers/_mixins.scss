@@ -1,0 +1,106 @@
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin quadrado( $px ){
+  width: $px;
+  height: $px;
+}
+
+@mixin rotate( $value ){
+  -webkit-transform: rotate( $value );
+  -moz-transform: rotate( $value );
+  -o-transform: rotate( $value );
+  -ms-transform: rotate( $value );
+  transform: rotate( $value );
+}
+
+@mixin input-placeholder($color) {
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    color: $color;
+}
+
+//Px-to-EM 
+@mixin px-to-em($size) {
+    font-size: $size / 16 + em;
+}
+
+@function rem($pxsize) {
+    @return #{$pxsize/16}rem;
+}
+
+@function get-vh($object) {
+    $vh: (960 * 0.01) * 1px;
+    @return ($object / $vh) * 1vh;
+}
+
+/* Media Querys */
+@mixin full {
+  @media (max-width: #{$full}) {
+    @content;
+  }
+}
+
+@mixin monitor {
+  @media (max-width: #{$monitor}) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media (max-width: #{$notebook}) {
+    @content;
+  }
+}
+@mixin netbook {
+  @media (max-width: #{$netbook}){
+    @content;
+  }
+}
+
+@mixin tabletW {
+   @media (max-width: #{$tabletW}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+   @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin miniMobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin hMax-900{
+  @media (max-height:901px) and ( min-width: $netbook-width-min){
+    @content;
+  }
+}
+
+@mixin hMax-650{
+  @media (max-height:651px) and ( min-width: $netbook-width-min) {
+    @content;
+  }
+}

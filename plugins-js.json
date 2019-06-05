@@ -1,0 +1,10 @@
+[
+	{
+		"nome_arquivo": "generico",
+		"arquivos": [
+			"bower_components/jquery.min.js",
+			"bower_components/iziModal-master/js/iziModal.min.js"
+		]
+	}
+] 
+ 

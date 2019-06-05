@@ -1,0 +1,41 @@
+.content{
+    &_infos{
+        width: 100%;
+        background-color: #1c1e22;
+        padding: rem( 50 ) 0;
+
+        p{
+            font-family: $font-regular; 
+            font-size: rem( 16 );
+            color: #1c1e22;
+            margin-bottom: 20px;
+        }
+
+        .btn{
+            font-family: $font-regular; 
+        }
+
+        .resultado{
+            .card{
+                margin-bottom: 20px;
+            }
+            
+            .card-header{
+                font-family: $font-regular; 
+                color: #1c1e22;
+                text-align: left;
+                strong{
+                    font-family: $font-bold; 
+                }
+            }
+            .card-text{
+                font-family: $font-regular; 
+                font-size: rem( 18 );
+                color: #1c1e22;
+                strong{
+                    font-family: $font-bold; 
+                }
+            }
+        }
+    }
+}

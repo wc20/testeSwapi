@@ -1,0 +1,20 @@
+/* Modal */
+#modal {
+    .card-header{
+        font-family: $font-regular; 
+        color: #1c1e22;
+        text-align: left;
+        strong{
+            font-family: $font-bold; 
+        }
+    }
+
+    .card-body{
+        font-family: $font-regular; 
+        font-size: rem( 14 );
+        color: #1c1e22;
+        strong{
+            font-family: $font-bold; 
+        }
+    }
+}
