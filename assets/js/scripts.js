@@ -48,21 +48,20 @@
                             var mgltTotal = consumoTotal(data.results[c].MGLT, consumo , valCliente );
 
                             //Testa se tem algum valor dentro do campo de MGLT
-                            if(isNaN(mgltTotal))
-                                mgltTotal = "Valor MGLT não foi informado!";
-
-                            //template
-                            $('#listaNaves').append(
-                                "<div class='col-md-6'>" +
-									"<div class='card'>" +
-										"<h4 class='card-header'> <strong> Espaçonave: </strong> " + data.results[c].name + "</h4>" +
-										"<div class='card-body text-left'>" +
-                                            "<p class='card-text'> <strong> Paradas: </strong> " + mgltTotal + " </p>" +
-                                            "<a href='#' data-nave='"+ data.results[c].url +"' class='btn btn-info open-modal'> Saiba mais sobre a espaçonave </a>" +
-										"</div>" +
-									"</div>" +
-								"</div>"
-                            );
+                            if(!isNaN(mgltTotal)){
+                                //template
+                                $('#listaNaves').append(
+                                    "<div class='col-md-6'>" +
+                                        "<div class='card'>" +
+                                            "<h4 class='card-header'> <strong> Espaçonave: </strong> " + data.results[c].name + "</h4>" +
+                                            "<div class='card-body text-left'>" +
+                                                "<p class='card-text'> <strong> Paradas: </strong> " + mgltTotal + " </p>" +
+                                                "<a href='#' data-nave='"+ data.results[c].url +"' class='btn btn-info open-modal'> Saiba mais sobre a espaçonave </a>" +
+                                            "</div>" +
+                                        "</div>" +
+                                    "</div>"
+                                );
+                            }
                         }
                     });
                 }

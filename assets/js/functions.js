@@ -21,7 +21,7 @@ function consumoTotal( mglt, consumo, mgltTotal ){
     var totalConsumido = mgltPorDia * consumo;
     var result = mgltTotal / totalConsumido;
 
-    return  Math.round(result);
+    return  Math.trunc(result);
 }
 
 function loadIn(){
